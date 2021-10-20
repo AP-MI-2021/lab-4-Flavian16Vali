@@ -64,6 +64,34 @@ def get_div(lst):
     return lst_div
 
 
+def nume(i):
+    a=1
+    lst_name=[]
+    if i<0:
+        lst_name.append("minus")
+        a=i*(-1)
+    else: a=i
+    if i==0:return "zero"
+    while a!=0:
+        aux=a%1
+        if aux=='1':lst_name.append("unu")
+        elif aux=='2':lst_name.append("doi")
+        elif aux=='3':lst_name.append("trei")
+        elif aux=='4':lst_name.append("patru")
+        elif aux=='5':lst_name.append("cinci")
+        elif aux=='6':lst_name.append("sase")
+        elif aux=='7':lst_name.append("sapte")
+        elif aux=='8':lst_name.append("opt")
+        elif aux=='9':lst_name.append("noua")
+        elif aux=='0':lst_name.append("zero")
+        elif aux==' ':lst_name.append(" ")
+        else: lst_name.append("virgula")
+    return lst_name
+def get_name(lst):
+    lst_name=[]
+    for j in lst:
+        lst_name.append(nume(j))
+    return lst_name
 def main():
     while True:
         show_menu()
@@ -76,6 +104,8 @@ def main():
             print(get_interval(lst))
         elif opt == '4':
                 print(get_div(lst))
+        elif opt == '5':
+            print(get_name(lst))
         elif opt == 'x':
             break
         else:
