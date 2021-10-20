@@ -55,7 +55,7 @@ def parte_frac(n):
     b=int(float(str(b)[::-1]))
     a=int(m)
     if b==0: return False
-    if b%a==0: return n
+    if b%a==0: return True
 def get_div(lst):
     lst_div=[]
     for i in lst:
@@ -75,7 +75,6 @@ def main():
         elif opt == '3':
             print(get_interval(lst))
         elif opt == '4':
-            for i in lst:
                 print(get_div(lst))
         elif opt == 'x':
             break
